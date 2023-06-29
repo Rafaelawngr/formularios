@@ -12,7 +12,7 @@ main {
   background-color: #ffffff;
   width: 400px;
   max-width: 500px;
-  padding: 40px;
+  padding: 32px 40px;
   border-radius: 10px;
   box-shadow: 3px 3px 20px #b1b1b1;
   position: absolute;
@@ -22,17 +22,88 @@ main {
 }
 
 form {
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-label {
+h1 {
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+h1::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #3d38ff;
+  height: 2px;
+  bottom: -2px;
+  border-radius: 5px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile input {
+  margin-top: 8px;
+  color: #3d38ff;
+  font-size: .75rem;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: none;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.labelContent {
+  font-size: .9rem;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.labelTitle {
   font-size: 0.85rem;
   font-weight: 600;
   color: #727272;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelOption {
+  font-size: .9rem;
+  display: flex;
+  gap: 6px;
+  height: 35px;
+}
+
+#perguntaExtra {
+  display: none;
+}
+
+.radio2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 5px;
 }
 
 input {
@@ -41,4 +112,46 @@ input {
   cursor: text;
   padding: 6px;
   margin-bottom: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="color"] {
+  margin-top: 8px;
+  width: 320px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+input[type="color"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.submit {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 16px;
+  padding: 8px;
+  background-color: #3d38ff;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.voltar a {
+  font-size: .9rem;
+  color: #3d38ff;
 }

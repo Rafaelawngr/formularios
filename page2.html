@@ -11,50 +11,40 @@
   <title>Meu perfil</title>
 </head>
 <main>
-  <form>
-    <label for="profilePic">Foto de perfil</label>
-    <input type="image">
-
-    <label for="fname">Primeiro nome</label>
+  <form autocomplete="off" id="completeProfile">
+    <h1>Complete seu perfil</h1>
+    <div class="profile">
+      <img id="previewImage" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="Preview Image">
+    <input type="file" class="profile" id="inputFile" onchange="changePic()">
+  </div>
+  
+   
+    <label class="labelTitle" for="fname" id="firstname">Primeiro nome</label>
     <input type="text">
 
-    <label for="lname">Sobrenome</label>
+    <label class="labelTitle" for="lname" id="lastname">Sobrenome</label>
     <input type="text">
 
-    <label for="adress">Endereço</label>
+    <label class="labelTitle" for="adress" id="adress">Endereço</label>
     <input type="text">
 
-    <label for="birthday">Data de nascimento</label>
+    <label class="labelTitle" for="birthday">Data de nascimento</label>
     <input type="date">
 
-    <label for="children">Possui filhos?</label>
-    <input type="radio">Sim
-    <input type="radio">Não
+    <label for="favColor" class="labelTitle">Qual a sua cor favorita?</label>
+    <div class="colorPicker">
+        <input type="color" name="colorInput" id="colorInput" onchange=" changeColor()"/>
+    </div>
+    <button class="submit"><a id="colorInput" href="page3.html">Próxima página  >></a></button>
 
-    <label for="children2">Se marcou 'Sim' na pergunta anterior, quantos filhos possui?</label>
-    <input type="radio">Entre 1-2
-    <input type="radio">Entre 3-4
-    <input type="radio">Mais de 5
-
-    <label for="sports">Selecione 3 esportes dos quais você mais gosta/ou gostaria de praticar</label>
-    <input type="checkbox">Futebol
-    <input type="checkbox">Vôlei
-    <input type="checkbox">Dança
-    <input type="checkbox">Corrida
-    <input type="checkbox">Musculação
-    <input type="checkbox">Crossfit
-
-    <input type="submit" value="Confirmar">
 
   </form>
 </main>
+
+ <script src="page2.js"></script>
 
 <body>
 
 </body>
 
 </html>
-
-<!--
-// inputs: text, radio, checkbox, select option,etc
-// Botão confirmar: todos os dados inseridos de forma organizada (estilo página de perfil) -->

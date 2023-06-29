@@ -21,7 +21,7 @@ function submitForm(e) {
   if (usuarioValidado == true) {
     window.location.href = "page2.html";
   } else {
-    errorMessage.innerHTML = "Ops, parece que você não está cadastrado!";
+    errorMessage.innerHTML = "Ops, o usuário não foi encontrado!";
   }
 }
 
@@ -35,9 +35,9 @@ class User {
   }
 }
 
-const user1 = new User("Rafaela", "159753");
-const user2 = new User("Jorge", "951357");
-const user3 = new User("Brenda", "753951");
+const user1 = new User("rafaela", "159753");
+const user2 = new User("jorge", "951357");
+const user3 = new User("brenda", "753951");
 
 const listaUsers = [user1, user2, user3];
 
