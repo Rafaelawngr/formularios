@@ -5,9 +5,19 @@
   padding: 0;
 }
 
+:root {
+  --THEMECOLOR: #0021da;
+}
+
 body {
   background-color: #bfc4d1;
 }
+
+.page3 {
+  display: none;
+}
+
+
 main {
   background-color: #ffffff;
   width: 400px;
@@ -31,16 +41,7 @@ h1 {
   font-size: 1.5rem;
   position: relative;
   margin-bottom: 16px;
-}
-
-h1::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  background-color: #3d38ff;
-  height: 2px;
-  bottom: -2px;
-  border-radius: 5px;
+  border-bottom: 2px solid var(--THEMECOLOR);
 }
 
 .profile {
@@ -48,16 +49,18 @@ h1::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .profile input {
   margin-top: 8px;
-  color: #3d38ff;
+  color: var(--THEMECOLOR);
   font-size: .75rem;
   padding: 4px;
   background-color: #fff;
   border-radius: 6px;
   border: none;
+  
 }
 
 .profile img {
@@ -70,15 +73,14 @@ h1::before {
 .labelContent {
   font-size: .9rem;
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .labelTitle {
   font-size: 0.85rem;
   font-weight: 600;
   color: #727272;
-  margin-bottom: 6px;
-
+  margin-bottom: 10px;
 }
 
 .radio {
@@ -133,16 +135,18 @@ input[type="color"]:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-
 .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1rem;
   color: #ffffff;
   margin-top: 16px;
-  padding: 8px;
-  background-color: #3d38ff;
+  background-color: var(--THEMECOLOR);
   border-radius: 6px;
   cursor: pointer;
   border: none;
+  padding: 8px;
 }
 
 a {
@@ -151,7 +155,21 @@ a {
   text-decoration: none;
 }
 
-.voltar a {
+
+.goBack {
+  margin-top: 16px;
   font-size: .9rem;
-  color: #3d38ff;
+  color: var(--THEMECOLOR);
+  display: flex;
+  align-items: center;
+  border: none;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 20;
+}
+

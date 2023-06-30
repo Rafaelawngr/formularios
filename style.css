@@ -9,6 +9,7 @@ body {
   background-color: #bfc4d1;
 }
 
+
 main {
   background-color: #ffffff;
   width: 300px;
@@ -25,16 +26,6 @@ main {
 h1 {
   font-size: 1.5rem;
   position: relative;
-}
-
-h1::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  background-color: #3d38ff;
-  height: 2px;
-  bottom: -2px;
-  border-radius: 5px;
 }
 
 form {
