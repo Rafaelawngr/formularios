@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <title>Formulário</title>
+    </head>
 
-    <title>Formulário</title>
-</head>
+    <body>
+        <main>
+            <h1>Login</h1>
+            <form id="login">
+                <div class="form-control">
+                    <label for="name">Username</label>
+                    <input type="text" name="username" id="name" />
+                    <span class="material-symbols-outlined">
+                        check_circle
+                    </span>
+                    <span class="material-symbols-outlined"> error </span>
+                    <small>Preencha os campos corretamente</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" />
+                    <span class="material-symbols-outlined">
+                        check_circle
+                    </span>
+                    <span class="material-symbols-outlined"> error </span>
+                    <small>Preencha os campos corretamente</small>
+                </div>
 
-<body>
-    <main>
-        <h1>Login</h1>
-        <form id="login" autocomplete="off">
-            <label for="name">Username</label>
-            <input type="text" name="username" id="name" />
+                <input
+                    class="submit"
+                    type="submit"
+                    id="submit"
+                    value="Inscreva-se"
+                />
+                <div class="error-message" id="error-message">
+                   
+                </div>
+            </form>
+        </main>
 
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" />
-
-            <input class="submit" type="submit" id="submit" value="Inscreva-se" />
-            <div id="error-message"></div>
-        </form>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

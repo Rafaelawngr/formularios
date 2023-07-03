@@ -19,7 +19,7 @@
     <h1>Complete seu perfil</h1>
     <div class="profile">
       <img id="previewImage" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="Preview Image">
-    <input type="file" accept="Image/*" class="profile" id="inputFile" onchange="changePic()">
+    <input type="file" accept="Image/*" class="profile" id="inputFile" name="imagem" onchange="changePic()">
   </div>
   
    
@@ -39,7 +39,7 @@
     <div class="colorPicker">
         <input type="color" name="colorInput" id="colorInput" oninput=" changeColor()"/>
     </div>
-    <button class="submit" type="submit" onclick="next()">Continuar</button>
+    <button class="submit" type="button" onclick="next()">Continuar</button>
 
 
   </div>
@@ -156,19 +156,30 @@
       </div>
       <button class="submit" type="submit" onclick="submitForm()">Confirmar</button>
       <div>
-          <button class="goBack" onclick="goBack()"> 
+          <button class="goBack" type="button" onclick="goBack()"> 
             <span class="material-symbols-outlined">
               arrow_back_ios</span>
               Voltar</button>
       </div>
   </div>
-  </form>
-
-
-
-
-
 </div>
+
+</form>
+    <div class="page4" id="page4">
+        <h1>Meu perfil</h1>
+
+        <div class="profile">
+            <img id="chosenImage"> 
+            <p class="nome" id="nome-completo">Nome completo</p>
+        </div>
+
+        <div class="content">
+            <p id="endereco">Endereço</p>
+            <p id="dataNascimento">Data de nascimento</p>
+            <p id="filhos">Filhos</p>
+            <p id="esportes">Esportes</p>
+        </div>
+    </div>
 </main>
 
  <script src="script-profile.js"></script>

@@ -17,6 +17,9 @@ body {
   display: none;
 }
 
+.page4 {
+  display: none;
+}
 
 main {
   background-color: #ffffff;
@@ -68,6 +71,20 @@ h1 {
   height: 150px;
   border-radius: 50%;
   position: relative;
+}
+
+.nome {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #1f1f1f;
+  margin-top: 12px;
+}
+
+.content {
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: #727272;
+  margin: 8px;
 }
 
 .labelContent {

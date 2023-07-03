@@ -1,6 +1,9 @@
 const form = document.querySelector("#login");
 form.addEventListener("submit", submitForm);
 
+const user = document.querySelector('#name');
+const pass = document.querySelector('#password');
+
 function submitForm(e) {
   e.preventDefault();
 
@@ -21,7 +24,7 @@ function submitForm(e) {
   if (usuarioValidado == true) {
     window.location.href = "page2.html";
   } else {
-    errorMessage.innerHTML = "Ops, o usuário não foi encontrado!";
+    errorMessage.innerText = "Ops, o usuário não foi encontrado!";
   }
 }
 
@@ -40,5 +43,6 @@ const user2 = new User("jorge", "951357");
 const user3 = new User("brenda", "753951");
 
 const listaUsers = [user1, user2, user3];
+
 
 
