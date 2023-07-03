@@ -76,7 +76,7 @@ h1 {
 .nome {
   font-weight: 600;
   font-size: 1.15rem;
-  color: #1f1f1f;
+  color: var(--THEMECOLOR);
   margin-top: 12px;
 }
 

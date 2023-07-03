@@ -92,7 +92,7 @@ function submitForm(e) {
     const natacao = formValuesProfile.esNat;
     const luta = formValuesProfile.esLut;
 
-    let previewFile = document.querySelector('#previewFile')
+    let previewImage = document.querySelector('#previewImage')
     let resultadoFoto = document.querySelector('#chosenImage')
 
 
@@ -103,5 +103,12 @@ function submitForm(e) {
     resultadoEndereco.innerText = ` Endereço: ${adress}`;
 
     let resultadoNascimento = document.querySelector("#dataNascimento");
-    resultadoNascimento.innerText = ` Data de nascimento:${birthDate}`;
+    resultadoNascimento.innerText = `Data de nascimento:${birthDate}`;
+
+    let resultadoFilhosSim = document.querySelector('#sim')
+    let resultadoFilhosNao = document.querySelector('#nao')
+
+    if (resultadoFilhosNao === true) {
+        resultadoFilhosNao.innerText = "Você não possui filhos!"
+    }
 }
