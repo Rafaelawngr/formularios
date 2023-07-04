@@ -81,14 +81,15 @@ function submitForm(e) {
   // page-3
   const filhos = formValuesProfile.resposta;
   const qtsFilhos = formValuesProfile.filhos;
-  const esFut = formValuesProfile.iesFut;
-  const esVolei = formValuesProfile.iesVolei;
-  const esDanca = formValuesProfile.iesDanca;
-  const esCor = formValuesProfile.iesCor;
-  const esMus = formValuesProfile.iesMus;
-  const esCross = formValuesProfile.iesCross;
-  const esNat = formValuesProfile.iesNat;
-  const esLut = formValuesProfile.iesLut;
+  
+  const futebol = formValuesProfile.futebol;
+  const volei = formValuesProfile.volei;
+  const danca = formValuesProfile.danca;
+  const corrida = formValuesProfile.corrida;
+  const musculacao = formValuesProfile.musculacao;
+  const crossfit = formValuesProfile.crossfit;
+  const natacao = formValuesProfile.natacao;
+  const luta = formValuesProfile.luta;
 
   let resultadoFoto = document.querySelector("#chosenImage");
   resultadoFoto.src = selectedImage;
@@ -96,46 +97,65 @@ function submitForm(e) {
   let resultadoNome = document.querySelector("#nome-completo");
   resultadoNome.innerText = `${firstName} ${lastName}`;
 
-  let resultadoEndereco = document.querySelector("#endereco");
+  let resultadoEndereco = document.querySelector("#enderecoResult");
   resultadoEndereco.innerText = `Você mora na ${adress},`;
 
-  let resultadoNascimento = document.querySelector("#dataNascimento");
+  let resultadoNascimento = document.querySelector("#dataNascimentoResult");
   resultadoNascimento.innerText = `nasceu no dia ${birthDate},`;
 
-  let resultadoFilhos = document.querySelector("#filhos");
+  let resultadoFilhos = document.querySelector("#filhosResult");
   if (filhos === "sim") {
-    resultadoFilhos.innerText = `tem ${qtsFilhos} filhos e`;
+   
+    if (qtsFilhos === '1') {
+      resultadoFilhos.innerText = `tem entre 1 e 2 filhos e`;
+    } else if (qtsFilhos === '2') {
+      resultadoFilhos.innerText = `tem entre 3 e 4 filhos e`;
+    } else {
+      resultadoFilhos.innerText = `tem 5 filhos ou mais e`;
+      }
+
   } else {
     resultadoFilhos.innerText = "";
   }
 
-  let resultadoEsportes = document.querySelector("#esportes");
-  resultadoEsportes.innerText = "seus esportes favoritos são: ";
 
-  if (esFut) {
-    resultadoEsportes += "Futebol, ";
-  }
-  if (esVolei) {
-    resultadoEsportes += "Vôlei, ";
-  }
-  if (esDanca) {
-    resultadoEsportes += "Dança, ";
-  }
-  if (esCor) {
-    resultadoEsportes += "Corrida, ";
-  }
-  if (esMus) {
-    resultadoEsportes += "Musculação, ";
-  }
-  if (esCross) {
-    resultadoEsportes += "Crossfit, ";
-  }
-  if (esNat) {
-    resultadoEsportes += "Natação, ";
-  }
-  if (esLut) {
-    resultadoEsportes += "Luta, ";
-  }
+  let resultadoEsportes = document.querySelector("#esportesResult");
+  let esportesSelecionados = [];
+  console.log(esportesSelecionados)
 
-  resultadoEsportes.innerText = resultadoEsportes.innerText.slice(0, -2); // para remover a vírgula e o espaço após o último esporte
+
+  if (futebol) {
+    esportesSelecionados.push("Futebol");
+  }
+  
+  if (volei) {
+    esportesSelecionados.push("Vôlei");
+  }
+  
+  if (danca) {
+    esportesSelecionados.push("Dança");
+  }
+  
+  if (corrida) {
+    esportesSelecionados.push("Corrida");
+  }
+  
+  if (musculacao) {
+    esportesSelecionados.push("Musculação");
+  }
+  
+  if (crossfit) {
+    esportesSelecionados.push("Crossfit");
+  }
+  
+  if (natacao) {
+    esportesSelecionados.push("Natação");
+  }
+  
+  if (luta) {
+    esportesSelecionados.push("Luta");
+  }
+  resultadoEsportes.innerText = "Seus esportes favoritos são: " + esportesSelecionados.join(", ");
+
 }
+
