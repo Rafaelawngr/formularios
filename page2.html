@@ -2,187 +2,133 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="page2style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page2style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-  <title>Meu perfil</title>
+    <title>Meu perfil</title>
 </head>
 <main>
-  <div class="page2" id="page2">
-  <form autocomplete="off" id="completeProfile">
-    <h1>Complete seu perfil</h1>
-    <div class="profile">
-      <img id="previewImage" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="Preview Image">
-    <input type="file" accept="Image/*" class="profile" id="inputFile" name="imagem" onchange="changePic()">
-  </div>
-  
-   
-    <label class="labelTitle" for="fname" id="firstname">Primeiro nome</label>
-    <input type="text" id="firstname" name="nome">
+    <div class="page2" id="page2">
+        <form autocomplete="off" id="completeProfile">
+            <h1>Complete seu perfil</h1>
+            <div class="profile">
+                <img id="previewImage" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="Preview Image">
+                <input type="file" accept="Image/*" class="profile" id="inputFile" name="imagem" onchange="changePic()">
+            </div>
 
-    <label class="labelTitle" for="lname" id="lastname">Sobrenome</label>
-    <input type="text" id="lastname" name="sobrenome">
 
-    <label class="labelTitle" for="adress" id="adress">Endereço</label>
-    <input type="text" name="endereco">
+            <label class="labelTitle" for="fname" id="firstname">Primeiro nome</label>
+            <input type="text" id="firstname" name="nome">
 
-    <label class="labelTitle" for="birthday">Data de nascimento</label>
-    <input type="date" name="dataNascimento">
+            <label class="labelTitle" for="lname" id="lastname">Sobrenome</label>
+            <input type="text" id="lastname" name="sobrenome">
 
-    <label for="favColor" class="labelTitle">Qual a sua cor favorita?</label>
-    <div class="colorPicker">
-        <input type="color" name="colorInput" id="colorInput" oninput=" changeColor()"/>
+            <label class="labelTitle" for="adress" id="adress">Endereço</label>
+            <input type="text" name="endereco">
+
+            <label class="labelTitle" for="birthday">Data de nascimento</label>
+            <input type="date" name="dataNascimento">
+
+            <label for="favColor" class="labelTitle">Qual a sua cor favorita?</label>
+            <div class="colorPicker">
+                <input type="color" name="colorInput" id="colorInput" oninput=" changeColor()" />
+            </div>
+            <button class="submit" type="button" onclick="next()">Continuar</button>
+
+
     </div>
-    <button class="submit" type="button" onclick="next()">Continuar</button>
+    <div class="page3" id="page3">
+        <h1>Complete seu perfil</h1>
+        <div class="radio">
+            <label class="labelTitle" for="filhos">Você tem filhos?</label>
 
+            <div class="labelOption">
+                <input type="radio" name="resposta" id="sim" value="sim" onclick="mostrarPergunta()" />Sim
+            </div>
+            <div class="labelOption">
+                <input type="radio" name="resposta" id="nao" value="nao" onclick="mostrarPergunta()" checked />Não
+            </div>
+        </div>
 
-  </div>
-  <div class="page3"  id="page3">
-    <h1>Complete seu perfil</h1>
-    <div class="radio">
-      <label class="labelTitle" for="filhos">Você tem filhos?</label>
-  
-      <div class="labelOption">
-          <input
-              type="radio"
-              name="resposta"
-              id="sim"
-              value="sim"
-        
-              onclick="mostrarPergunta()"
-          />Sim
-      </div>
-      <div class="labelOption">
-          <input
-              type="radio"
-              name="resposta"
-              id="nao"
-              value="nao"
-        
-              onclick="mostrarPergunta()"
-              checked
-          />Não
-      </div>
-  </div>
-  
-  <div class="radio" id="perguntaExtra" onclick="mostrarPergunta()">
-      <label class="labelTitle" for="quantosFilhos"
-          >Quantos filhos tem?</label
-      >
-  
-      <div class="labelOption">
-          <input type="radio" name="filhos" id="atedois" /><label
-              for="atedois"
-              >Entre 1-2</label
-          >
-      </div>
-      <div class="labelOption">
-          <input type="radio" name="filhos" id="atequatro" /><label
-              for="atequatro"
-              >Entre 3-4</label
-          >
-      </div>
-      <div class="labelOption">
-          <input type="radio" name="filhos" id="maiscinco" /><label
-              for="maiscinco"
-              >Mais de 5</label
-          >
-      </div>
-  </div>
-  
-  <div class="radio" id="esportes">
-      <label class="labelTitle" for="sports"
-          >Selecione os esportes dos quais você mais gosta/ou gostaria
-          de praticar</label
-      >
-      <div class="radio2">
-          <div class="labelOption">
-              <input type="checkbox" name="esFut" id="iesFut" /><label
-                  for="iesFut"
-                  >Futebol</label
-              >
-          </div>
-          <div class="labelOption">
-              <input
-                  type="checkbox"
-                  name="esVolei"
-                  id="iesVolei"
-              /><label for="iesVolei">Vôlei</label>
-          </div>
-          <div class="labelOption">
-              <input
-                  type="checkbox"
-                  name="esDanca"
-                  id="iesDanca"
-              /><label for="iesDanca">Dança</label>
-          </div>
-          <div class="labelOption">
-              <input type="checkbox" name="esCor" id="iesCor" /><label
-                  for="iesCor"
-                  >Corrida</label
-              >
-          </div>
-          <div class="labelOption">
-              <input type="checkbox" name="esMus" id="iesMus" /><label
-                  for="iesMus"
-                  >Musculação</label
-              >
-          </div>
-          <div class="labelOption">
-              <input
-                  type="checkbox"
-                  name="esCross"
-                  id="iesCross"
-              /><label for="iesCross">Crossfit</label>
-          </div>
-          <div class="labelOption">
-              <input type="checkbox" name="esNat" id="iesNat" /><label
-                  for="iesNat"
-                  >Natação</label
-              >
-          </div>
-          <div class="labelOption">
-              <input type="checkbox" name="esLut" id="iesLut" /><label
-                  for="iesLut"
-                  >Luta</label
-              >
-          </div>
-      </div>
-      <button class="submit" type="submit" onclick="submitForm()">Confirmar</button>
-      <div>
-          <button class="goBack" type="button" onclick="goBack()"> 
-            <span class="material-symbols-outlined">
-              arrow_back_ios</span>
-              Voltar</button>
-      </div>
-  </div>
-</div>
+        <div class="radio" id="perguntaExtra" onclick="mostrarPergunta()">
+            <label class="labelTitle" for="quantosFilhos">Quantos filhos tem?</label>
 
-</form>
+            <div class="labelOption">
+                <input type="radio" name="filhos" id="filhos" /><label for="atedois">Entre 1-2</label>
+            </div>
+            <div class="labelOption">
+                <input type="radio" name="filhos" id="filhos" /><label for="atequatro">Entre 3-4</label>
+            </div>
+            <div class="labelOption">
+                <input type="radio" name="filhos" id="filhos" /><label for="maiscinco">Mais de 5</label>
+            </div>
+        </div>
+
+        <div class="radio" id="esportes">
+            <label class="labelTitle" for="sports">Selecione os esportes dos quais você mais gosta/ou gostaria
+                de praticar</label>
+            <div class="radio2">
+                <div class="labelOption">
+                    <input type="checkbox" name="esFut" id="iesFut" /><label for="iesFut">Futebol</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esVolei" id="iesVolei" /><label for="iesVolei">Vôlei</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esDanca" id="iesDanca" /><label for="iesDanca">Dança</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esCor" id="iesCor" /><label for="iesCor">Corrida</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esMus" id="iesMus" /><label for="iesMus">Musculação</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esCross" id="iesCross" /><label for="iesCross">Crossfit</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esNat" id="iesNat" /><label for="iesNat">Natação</label>
+                </div>
+                <div class="labelOption">
+                    <input type="checkbox" name="esLut" id="iesLut" /><label for="iesLut">Luta</label>
+
+                </div>
+            </div>
+            <button class="submit" type="submit" onclick="submitForm()">Confirmar</button>
+            <div>
+                <button class="goBack" type="button" onclick="goBack()">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios</span>
+                    Voltar</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
     <div class="page4" id="page4">
         <h1>Meu perfil</h1>
-
         <div class="profile">
-            <img id="chosenImage"> 
+            <img id="chosenImage" src="" alt="Profile Image">
+
             <p class="nome" id="nome-completo">Nome completo</p>
         </div>
 
         <div class="content">
-            <p id="endereco">Endereço</p>
-            <p id="dataNascimento">Data de nascimento</p>
-            <p id="filhos">Filhos</p>
-            <p id="esportes">Esportes</p>
+            <p id="endereco"></p>
+            <p id="dataNascimento"></p>
+            <p id="filhos"></p>
+            <p id="esportes"></p>
         </div>
     </div>
 </main>
 
- <script src="script-profile.js"></script>
+<script src="script-profile.js"></script>
 
 <body>
 

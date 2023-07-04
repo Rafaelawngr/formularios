@@ -13,7 +13,6 @@ body {
   background-color: #bfc4d1;
 }
 
-
 main {
   background-color: #ffffff;
   width: 300px;
@@ -30,7 +29,7 @@ main {
 h1 {
   font-size: 1.5rem;
   position: relative;
-  border-bottom: 2px solid var(--THEMECOLOR)
+  border-bottom: 2px solid var(--THEMECOLOR);
 }
 
 form {
@@ -38,7 +37,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
 }
 
 .form-control {
@@ -51,7 +49,6 @@ form {
   color: #727272;
   margin-bottom: 4px;
   display: inline-block;
-  
 }
 
 .form-control input {
@@ -62,6 +59,49 @@ form {
   margin-bottom: 16px;
   display: block;
   width: 100%;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
+}
+
+.form-control .material-symbols-outlined {
+  width: 10px;
+  position: absolute;
+  top: 29px;
+  right: 18px;
+  visibility: hidden;
+}
+
+.form-control.success .material-symbols-outlined.success {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form-control.error .material-symbols-outlined.error {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form-control small {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  color: red;
+  visibility: visible;
 }
 
 input:focus {
@@ -91,27 +131,8 @@ input:focus {
   height: 40px;
 }
 
-.form-control span {
-  width: 10px;
-  position: absolute;
-  top: 28px;
-  right: 15px;
-  color: red;
-  visibility: hidden;
-}
-
-.form-control small {
-  font-size: .70rem;
-  position: absolute;
-  color: red;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
 .error-message {
   margin-top: 16px;
   font-size: 0.8rem;
   color: red;
 }
-
